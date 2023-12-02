@@ -38,20 +38,24 @@ foreach ($people as $gadget => $items) {
 class Word
 {
     public $isIst;
-    public $deu;
+    public $value;
+    public $node = [];
 
-    function __construct($isIst, $deu)
+    function __construct($isIst, $value, $node)
     {
         $this->isIst = $isIst;
-        $this->deu = $deu;
+        $this->value = $value;
+        $this->node = $node;
     }
+
 }
 
 
-$tom = new Word(true, 'noch');
-
-$nodes = [new Word(true, 'noch'), new Word(true, 'nich'), new Word(true, 'kaufen')];
-
+$nodes = [
+    new Word(true, 'ono', ['das', 'mein', 'dein']),
+    new Word(true, 'on',['der', 'mein', 'dein']),
+    new Word(true, 'ona', ['die', 'meine', 'deine'])
+];
 
 
 foreach ($nodes as $gadget => $items) {
@@ -66,6 +70,4 @@ foreach ($nodes as $gadget => $items) {
 
 }
 
-
-
-echo json_encode($people);
+echo json_encode($nodes);
