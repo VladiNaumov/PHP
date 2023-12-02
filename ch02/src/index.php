@@ -1,5 +1,14 @@
 <?php
 
+echo "<h3>Countries</h3>";
+
+$countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+
+foreach ($countries as $n => $a) {
+    echo "<li>$n : $a </li>";
+
+}
+
 $gadgets = [
     "phones" => ["apple" => "iPhone 12", "samsumg" => "Samsung S20", "nokia" => "Nokia 8.3"],
     "tablets" => ["lenovo" => "Lenovo Yoga Smart Tab", "samsung" => "Samsung Galaxy Tab S5", "apple" => "Apple iPad Pro"]
@@ -7,25 +16,6 @@ $gadgets = [
 
 
 foreach ($gadgets as $gadget => $items) {
-    echo "<h3>$gadget</h3>";
-    echo "<ul>";
-    foreach ($items as $key => $value) {
-        echo "<li>$key : $value</li>";
-    }
-    echo "</ul>";
-}
-
-
-$people = [
-    ['name' => 'Tomm', 'age' => 25, 'address' => 'Helsinki'],
-    ['name' => 'Andre', 'age' => 33, 'address' => 'Oulu'],
-    ['name' => 'Vladimir', 'age' => 40,],
-    ['name' => 'Andre', 'age' => 33, 'address' => 'Oulu']
-
-];
-
-
-foreach ($people as $gadget => $items) {
     echo "<h3>$gadget</h3>";
     echo "<ul>";
     foreach ($items as $key => $value) {
@@ -49,11 +39,11 @@ class Word
     }
 
 }
-
+echo "<h3>Nodes</h3>";
 
 $nodes = [
     new Word(true, 'ono', ['das', 'mein', 'dein']),
-    new Word(true, 'on',['der', 'mein', 'dein']),
+    new Word(true, 'on', ['der', 'mein', 'dein']),
     new Word(true, 'ona', ['die', 'meine', 'deine'])
 ];
 
