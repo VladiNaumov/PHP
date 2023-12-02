@@ -1,3 +1,4 @@
 ### PHP
-- php sql, ORM redbin
-- php Associative Arrays, objects 
+- xh01 php sql, ORM redbin
+- ch02 php Associative Arrays, objects
+- ch03 CRUD
