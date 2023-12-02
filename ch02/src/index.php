@@ -1,5 +1,14 @@
 <?php
 
+echo "<h3>Users</h3>";
+
+$users = ["Tom", "Sam", "Bob", "Alice"];
+
+foreach ($users as $n => $a) {
+    echo "<li>$a </li>";
+
+}
+
 echo "<h3>Countries</h3>";
 
 $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
@@ -24,21 +33,6 @@ foreach ($gadgets as $gadget => $items) {
     echo "</ul>";
 }
 
-$phones = [
-    array("iPhone 12", "iPhone X", "iPhone 12 Pro"),
-    array("Samsung Galaxy S20", "Samsung Galaxy S20 Ultra"),
-    array("Nokia 8.3", "Nokia 3.4")
-
-];
-
-foreach ($phones as $brand => $items) {
-    echo "<ul>";
-
-    foreach ($items as $key => $value) {
-        echo "<li>$value</li>";
-    }
-    echo "</ul>";
-}
 
 class Word
 {
