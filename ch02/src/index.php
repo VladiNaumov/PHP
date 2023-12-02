@@ -24,6 +24,21 @@ foreach ($gadgets as $gadget => $items) {
     echo "</ul>";
 }
 
+$phones = [
+    array("iPhone 12", "iPhone X", "iPhone 12 Pro"),
+    array("Samsung Galaxy S20", "Samsung Galaxy S20 Ultra"),
+    array("Nokia 8.3", "Nokia 3.4")
+
+];
+
+foreach ($phones as $brand => $items) {
+    echo "<ul>";
+
+    foreach ($items as $key => $value) {
+        echo "<li>$value</li>";
+    }
+    echo "</ul>";
+}
 
 class Word
 {
@@ -31,33 +46,25 @@ class Word
     public $value;
     public $node = [];
 
-    function __construct($isIst, $value, $node)
+    function __construct($isIst, $value)
     {
         $this->isIst = $isIst;
         $this->value = $value;
-        $this->node = $node;
+
     }
 
 }
+
 echo "<h3>Nodes</h3>";
 
 $nodes = [
-    new Word(true, 'ono', ['das', 'mein', 'dein']),
-    new Word(true, 'on', ['der', 'mein', 'dein']),
-    new Word(true, 'ona', ['die', 'meine', 'deine'])
+    "DER" => new Word(true, 'Der'),  "DIE" => new Word(true, 'Die'), "DAS" => new Word(true, 'Das')
 ];
 
 
 foreach ($nodes as $gadget => $items) {
-
     echo "<ul>";
-
-    foreach ($items as $key => $value) {
-        echo "<li>$key : $value</li>";
-    }
+    echo "<li>$gadget : </li>";
     echo "</ul>";
-
-
 }
-
-echo json_encode($nodes);
+echo json_encode($countries);
