@@ -1,2 +1,4 @@
 Импортируйте базу данных из файла db.sql
 Измените данные для подключения к базе данных в файле config/connect.php
+
+tutorial - https://youtu.be/GDVWdYZLM7w?si=5HFiIDVmkGapumrT
