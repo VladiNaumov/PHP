@@ -1,7 +1,7 @@
 <?php
 
 require_once './vendor/query.php';
-require_once './util/connect.php';
+require_once './util/mysqli_connect.php';
 
 $connect = connect();
 
