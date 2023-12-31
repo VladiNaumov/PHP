@@ -14445,14 +14445,14 @@ class Facade
 	/**
 	 * Same as taggedAll() but counts beans only (does not return beans).
 	 *
-	 * @see R::taggedAll
-	 *
-	 * @param string       $beanType type of bean you are looking for
+	 * @param string $beanType type of bean you are looking for
 	 * @param array|string $tagList  list of tags to match
 	 * @param string       $sql      additional sql snippet
 	 * @param array        $bindings bindings
 	 *
 	 * @return integer
+	 *@see RearBean::taggedAll
+	 *
 	 */
 	public static function countTaggedAll( $beanType, $tagList, $sql = '', $bindings = array() )
 	{
@@ -14462,14 +14462,14 @@ class Facade
 	/**
 	 * Same as tagged() but counts beans only (does not return beans).
 	 *
-	 * @see R::tagged
-	 *
-	 * @param string       $beanType type of bean you are looking for
+	 * @param string $beanType type of bean you are looking for
 	 * @param array|string $tagList  list of tags to match
 	 * @param string       $sql      additional sql snippet
 	 * @param array        $bindings bindings
 	 *
 	 * @return integer
+	 *@see RearBean::tagged
+	 *
 	 */
 	public static function countTagged( $beanType, $tagList, $sql = '', $bindings = array() )
 	{
@@ -17903,8 +17903,8 @@ namespace {
 //make some classes available for backward compatibility
 class RedBean_SimpleModel extends \RedBeanPHP\SimpleModel {};
 
-if (!class_exists('R')) {
-	class R extends \RedBeanPHP\Facade{};
+if (!class_exists('RearBean')) {
+	class RearBean extends \RedBeanPHP\Facade{};
 }
 
 

@@ -26,21 +26,30 @@ error_reporting(-1);
 
 
 
-echo "<table><tr><th>category_id</th><th>title</th><th>excerpt</th><th>text</th><th>keywords</th><th>discription</th></tr>";
+echo "
+<table>
+    <tr>
+        <th>category_id</th>
+        <th>title</th>
+        <th>excerpt</th>
+        <th>text</th>
+        <th>keywords</th>
+        <th>discription</th>
+    </tr>
+
+";
 
     while ($row = $result->fetch())
    // foreach ($result as $row)
-
     {
-
-    echo "<tr>";
-    echo "<td>" . $row["category_id"] . "</td>";
-    echo "<td>" . $row["title"] . "</td>";
-    echo "<td>" . $row["excerpt"] . "</td>";
-    echo "<td>" . $row["text"] . "</td>";
-    echo "<td>" . $row["keywords"] . "</td>";
-    echo "<td>" . $row["discription"] . "</td>";
-    echo "</tr>";
+        echo "<tr>";
+        echo "<td>" . $row["category_id"] . "</td>";
+        echo "<td>" . $row["title"] . "</td>";
+        echo "<td>" . $row["excerpt"] . "</td>";
+        echo "<td>" . $row["text"] . "</td>";
+        echo "<td>" . $row["keywords"] . "</td>";
+        echo "<td>" . $row["discription"] . "</td>";
+        echo "</tr>";
     }
     echo "</table>";
 
@@ -53,6 +62,4 @@ echo "<table><tr><th>category_id</th><th>title</th><th>excerpt</th><th>text</th>
  * $DEMO->myDemo();
  * $DEMO->myDemo();
  *
- * Дваеточие - это обращение к статическому методу
- * $DEMO::myStaticDemo();
  */

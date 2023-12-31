@@ -1,12 +1,8 @@
 <?php
 
 namespace config;
-
-
 class DbConnect
 {
-
-
     public static function connection()
     {
         $dns = 'mysql:host=localhost;dbname=u1322686_demo;charset=utf8';
@@ -20,12 +16,6 @@ class DbConnect
 
         return  new \PDO($dns, $username, $password,$options);
 
-
     }
-
-
-
-
-
 
 }
