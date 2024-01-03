@@ -49,16 +49,33 @@ class Word
 
 }
 
-echo "<h3>Nodes</h3>";
 
-$nodes = [
+echo "<h3>Words</h3>";
+
+$Words = [
     "DER" => new Word(true, 'Der'),  "DIE" => new Word(true, 'Die'), "DAS" => new Word(true, 'Das')
 ];
 
 
-foreach ($nodes as $gadget => $items) {
+foreach ($Words as $gadget => $items) {
     echo "<ul>";
     echo "<li>$gadget : </li>";
     echo "</ul>";
 }
-echo json_encode($countries);
+echo json_encode($Words);
+
+
+$nodes['node_1'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_2'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_3'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_4'] = $countries = ["Germany","Madrid","Helsinki"];
+
+foreach ($nodes as $gadget => $items) {
+    echo "<h3>$gadget</h3>";
+    echo "<ul>";
+    foreach ($items as $key => $value) {
+        echo "<li>$key : $value</li>";
+    }
+    echo "</ul>";
+}
+echo json_encode($nodes);
