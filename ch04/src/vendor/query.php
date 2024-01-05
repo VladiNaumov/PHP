@@ -33,22 +33,27 @@ function getId($connect){
 
 function toJson($connect)
 {
+    try {
     $allProducts = [];
     $sql = "SELECT * FROM products";
     if ($result = $connect->query($sql)) {
         foreach ($result as $row) {
-            $id = $row['id'];
-            $title = $row['title'];
-            $price = $row['price'];
-            $description = $row['description'];
-
-            $product = ["Id" => "$id", "title" => "$title", "price" => "$price", "description" => "$description"];
-            $allProducts[] = $product;
+            $allProducts[] = $row;
 
         }
     }
 
-   echo json_encode($allProducts);
+    print json_encode([
+        'success' => true,
+        'messages' => $allProducts
+    ]);
+
+    } catch (\Exception $e) {
+        print json_encode([
+            'success' => false,
+            'error' => $e->getMessage()
+        ]);
+    }
 
 }
 
