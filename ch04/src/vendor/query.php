@@ -66,7 +66,7 @@ function toJSson_($connect){
     while ($allProduct = mysqli_fetch_assoc($allProducts)){
         $products[] = $allProduct;
     }
-    echo json_encode($products[]);
+    echo json_encode($products);
 }
 function rendering($connect)
 {
