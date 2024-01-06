@@ -57,6 +57,17 @@ function toJson($connect)
 
 }
 
+function toJSson_($connect){
+
+    $sql = "SELECT * FROM products";
+    $allProducts = mysqli_query($connect, $sql);
+    $products = [];
+
+    while ($allProduct = mysqli_fetch_assoc($allProducts)){
+        $products[] = $allProduct;
+    }
+    echo json_encode($products[]);
+}
 function rendering($connect)
 {
     $sql = "SELECT * FROM products";

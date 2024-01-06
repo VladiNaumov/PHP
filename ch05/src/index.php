@@ -1,7 +1,12 @@
 <?php
 
-header("Content-type: application/json");
 date_default_timezone_set('UTC');
+
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: *');
+header('Access-Control-Allow-Methods: *');
+header('Access-Control-Allow-Credentials: true');
+header("Content-type: application/json");
 
 function connect()
 {
