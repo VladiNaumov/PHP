@@ -65,10 +65,10 @@ foreach ($Words as $gadget => $items) {
 echo json_encode($Words);
 
 
-$nodes['node_1'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
-$nodes['node_2'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
-$nodes['node_3'] = $countries = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
-$nodes['node_4'] = $countries = ["Germany","Madrid","Helsinki"];
+$nodes['node_1'] = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_2'] = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_3'] = ["Germany" => "Berlin", "France" => "Paris", "Spain" => "Madrid"];
+$nodes['node_4'] = ["Germany","Madrid","Helsinki"];
 
 foreach ($nodes as $gadget => $items) {
     echo "<h3>$gadget</h3>";
