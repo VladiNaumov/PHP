@@ -38,7 +38,6 @@ class Word
 {
     public $isIst;
     public $value;
-    public $node = [];
 
     function __construct($isIst, $value)
     {
@@ -79,3 +78,26 @@ foreach ($nodes as $gadget => $items) {
     echo "</ul>";
 }
 echo json_encode($nodes);
+
+$books["library"] = [
+    ["id" => "1", "photo" => "https://your-demo.site/api/library/photos/tigra.jpg",
+        "author" => "Stephen King", "nameBook" => "Institute", "description" => "thriller"],
+
+    ["id" => "2", "photo" => "https://your-demo.site/api/library/photos/deutschland.mp3",
+        "author" => "Stephen King", "nameBook" => "Regulators", "description" => "thriller"],
+
+    ["id" => "3", "photo" => "https://your-demo.site/api/library/photos/Rammstein - Karaoke.mp4",
+        "author" => "Stephen King", "nameBook" => "Stranger", "description" => "thriller"],
+
+    ["id" => "4", "photo" => "https://your-demo.site/api/library/photos/Матвеев-С.А.-Немецко-русский.pdf",
+        "author" => "Stephen King", "nameBook" => "Mister Mercedes", "description" => "foreign detectives"],
+
+    [ "id" => "5", "photo" => "https://your-demo.site/api/library/photos/tigra.jpg",
+        "author" => "Stephen King", "nameBook" => "Cujo", "description" => "horror"],
+
+
+
+];
+
+print json_encode($books);
+
